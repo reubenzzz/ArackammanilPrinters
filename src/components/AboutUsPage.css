@@ -1,0 +1,555 @@
+/* src/pages/AboutPage.css */
+.about-page {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: white;
+}
+
+/* Hero Section - Kept as requested */
+.about-page-hero {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url('../assets/1u.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--white);
+    text-align: center;
+    padding: 0 20px;
+    animation: fadeIn 1.2s var(--ease-out);
+}
+
+.about-page-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.about-page-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.about-page-hero-content h1 {
+    font-family: 'Gilda Display', serif;
+    font-size: 2.8rem;
+    font-weight: 400;
+    margin-bottom: 0px;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.about-page-hero-content p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.9;
+    text-align: left;
+    font-family: 'Montserrat' sans-serif
+}
+
+/* Section Styling */
+.about-page-story,
+.about-page-values,
+.about-page-services,
+.about-page-process {
+    padding: 60px 100px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.about-page-section-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.about-page-accent-line {
+    height: 2px;
+    background: var(--accent-color);
+    width: 40px;
+}
+
+.about-page-section-header h2 {
+    font-family: 'Gilda Display', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #1a1a1a;
+}
+
+/* Our Story */
+.about-page-story-content {
+
+    margin: 0 auto;
+    font-family: 'Montserrat' sans-serif
+}
+
+.about-page-story-text p {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+}
+
+.about-page-stats-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about-page-stat-item {
+    text-align: center;
+    flex: 1;
+    min-width: 100px;
+}
+
+.about-page-stat-value {
+    font-family: 'Gilda Display', serif;
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    margin-bottom: 5px;
+}
+
+.about-page-stat-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #777;
+    font-weight: 500;
+}
+
+/* Values Section */
+.about-page-values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-page-value-card {
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.about-page-value-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transform: translateY(-5px);
+}
+
+.about-page-value-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.about-page-value-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    color: #1a1a1a;
+}
+
+.about-page-value-card p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Services Section */
+/* Add these styles to your CSS file */
+.about-page-services {
+    padding: 60px 100px;
+}
+
+.about-page-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.about-page-service-card {
+    height: 300px;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-image-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.8s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    transition: background 0.5s ease;
+}
+
+.service-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+    color: var(--white);
+    transform: translateY(0);
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.service-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    transition: all 0.5s ease;
+    transform: translateY(0);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.yellow-line {
+    width: 100px;
+    height: 2px;
+    background-color: #f6c90e;
+    margin-top: 8px;
+    /* Adjust spacing as needed */
+    border-radius: 0px;
+    /* Optional: for slightly rounded edges */
+}
+
+.service-description {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    transform: translateY(20px);
+    padding-top: 0;
+}
+
+.service-description p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+/* Hover Effects */
+.about-page-service-card:hover .service-overlay {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.about-page-service-card:hover .service-image-bg {
+    transform: scale(1.05);
+}
+
+.about-page-service-card:hover .service-content h3 {
+    transform: translateY(-20px);
+}
+
+.about-page-service-card:hover .service-description {
+    opacity: 1;
+    max-height: 200px;
+    transform: translateY(0);
+    padding-top: 20px;
+}
+
+.about-page-story-content.founder-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+}
+
+.about-page-story-content.founder-layout .about-page-story-text {
+    flex: 1 1 55%;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.8;
+}
+
+.about-page-story-content.founder-layout .founder-image-container {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+.founder-photo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.founder-photo:hover {
+    transform: scale(1.03);
+}
+
+.founder-caption {
+    margin-top: 0.75rem;
+    font-weight: 600;
+    color: #555;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-page-story-content.founder-layout {
+        flex-direction: column;
+        padding: 1.5rem 1rem;
+    }
+
+    .about-page-story-content.founder-layout .about-page-story-text,
+    .about-page-story-content.founder-layout .founder-image-container {
+        flex: 1 1 100%;
+    }
+
+    .founder-caption {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .about-page-services-grid {
+        padding: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .about-page-service-card {
+        height: 250px;
+    }
+
+    .service-content h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-page-services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-page-service-card {
+        height: 220px;
+    }
+
+    .service-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .service-description p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Process Section */
+.about-page-process-steps {
+
+    margin: 0 auto;
+    position: relative;
+}
+
+.about-page-process-steps::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 24px;
+    width: 1px;
+    background: rgba(246, 228, 33, 0.3);
+    z-index: 0;
+}
+
+.about-page-process-step {
+    display: flex;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.about-page-process-number {
+    font-family: 'Gilda Display', serif;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: 1px solid var(--accent-color);
+    border-radius: 50%;
+    margin-right: 30px;
+    flex-shrink: 0;
+}
+
+.about-page-process-content {
+    padding-top: 10px;
+}
+
+.about-page-process-step h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+}
+
+.about-page-process-step p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* CTA Section - Kept as requested */
+.about-page-cta {
+    height: 40vh;
+    min-height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    margin-top: 60px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.about-page-cta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.about-page-cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+.about-page-cta-content h2 {
+    font-family: 'Gilda Display', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.about-page-cta-button {
+    background: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 12px 35px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-page-cta-button:hover {
+
+    border-color: var(--accent-color);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .about-page-hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .about-page-section-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .about-page-hero {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .about-page-story,
+    .about-page-values,
+    .about-page-services,
+    .about-page-process {
+        padding: 20px 20px;
+    }
+
+    .about-page-stats-container {
+        gap: 10px;
+    }
+
+    .about-page-stat-item {
+        min-width: 80px;
+    }
+
+    .about-page-stat-value {
+        font-size: 1.5rem;
+    }
+
+    .about-page-process-steps::before {
+        left: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-page-hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .about-page-hero-content p {
+        font-size: 1rem;
+    }
+
+    .about-page-cta-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-page-process-step {
+        flex-direction: column;
+    }
+
+    .about-page-process-number {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .about-page-process-steps::before {
+        display: none;
+    }
+}

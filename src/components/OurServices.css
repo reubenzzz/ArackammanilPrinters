@@ -1,0 +1,200 @@
+/* Ensure section padding is responsive */
+.workflow-section {
+    background-color: #55605c;
+    color: white;
+    padding: 50px 80px;
+    text-align: left;
+    box-sizing: border-box;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)),
+        url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 40px 20px;
+}
+
+/* Header section adjustment */
+.our-workflow-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+/* Title section layout */
+.our-workflow-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+
+.our-workflow-title h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fffdfd;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    font-family: 'Gilda Display', serif;
+    white-space: normal;
+    z-index: 2;
+}
+
+.our-service-line-heading {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #005d7d;
+    
+    border: none;
+    min-width: 30px;
+    z-index: 2;
+}
+
+/* Subtitle container */
+.our-workflow-line-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.our-workflow-line {
+    width: 30px;
+    height: 2px;
+    background-color: #f6c90e;
+    z-index: 2;
+}
+
+.our-workflow-subtitle {
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    color: #f6c90e;
+    font-size: 0.9rem;
+    z-index: 2;
+}
+
+/* Cards container */
+.workflow-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+/* Individual card */
+/* Desktop - Show 5 cards in a row */
+.workflow-card {
+    flex: 1 1 calc(20% - 30px);
+    /* 5 cards per row with spacing */
+    max-width: calc(20% - 30px);
+    background: transparent;
+    text-align: center;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+
+.workflow-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Icon container */
+.workflow-icon-circle {
+    width: 80px;
+    height: 80px;
+    background: white;
+    color: #55605c;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    position: relative;
+}
+
+.workflow-step-number {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-color: #f6c90e;
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.workflow-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px 0;
+    color: #f6c90e;
+}
+
+.workflow-card p {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+    .workflow-section {
+        padding: 50px 50px;
+    }
+
+    .workflow-card {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .workflow-section {
+
+        padding: 50px 20px;
+
+    }
+
+    .our-workflow-title h2 {
+        font-size: 20px;
+    }
+
+    .our-workflow-subtitle {
+        font-size: 14px;
+    }
+
+    .workflow-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .workflow-icon-circle {
+        width: 80px;
+        height: 80px;
+        font-size: 1.5rem;
+    }
+
+    .workflow-step-number {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+    }
+}

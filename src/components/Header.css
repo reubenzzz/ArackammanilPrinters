@@ -1,0 +1,249 @@
+/* Header.css */
+.header-component {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    background-color: rgba(34, 34, 34, 0.5);
+    height: 55px;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+}
+
+.header-logo img {
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+}
+
+.header-navbar {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.header-navbar ul {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+.header-navbar li {
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: lighter;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+}
+
+/* Style the link inside list items */
+.header-navbar li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Optional: add hover effects */
+.header-navbar li a:hover {
+    color: #ccc;
+    /* or any hover color you want */
+}
+
+
+/* Hamburger Icon Styles */
+.hamburger-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 10;
+}
+
+.hamburger-icon span {
+    width: 20px;
+    height: 1px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.book-btn button {
+    background: transparent;
+    border: 1px solid #f6c90e;
+    color: #f6c90e;
+    padding: 5px 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    /* Added for hover effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.3s ease;
+    /* Added for text color transition */
+}
+
+.book-btn-hover-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    /* Initial width */
+    height: 100%;
+    background: #f6c90e;
+    transition: width 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: -1;
+    /* Send behind text */
+}
+
+.book-btn button:hover {
+    color: white;
+    /* Text color on hover */
+}
+
+.book-btn button:hover .book-btn-hover-effect {
+    width: 100%;
+    /* Expand to full width on hover */
+}
+
+.mobile-only {
+    display: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .header-navbar ul {
+        gap: 2rem;
+    }
+
+    .header-navbar li {
+        font-size: 0.9rem;
+    }
+
+    .book-btn button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .header-component {
+        padding: 0 1.5rem;
+    }
+
+    .header-logo img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .header-navbar ul {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 868px) {
+    .header-navbar ul {
+        gap: 1rem;
+    }
+
+    .header-navbar li {
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile View Changes */
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .header-component {
+        padding: 0 1rem;
+    }
+
+    /* Changed sidebar transition from right-to-left to top-to-bottom */
+    .header-navbar {
+        position: fixed;
+        top: -100%;
+        /* Start off-screen from top */
+        left: 0;
+        height: 60vh;
+        /* Half screen height */
+        width: 100%;
+        background-color: rgba(34, 34, 34, 0.95);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        transition: top 0.4s ease-in-out;
+        /* Changed to top transition */
+        padding-top: 30px;
+        /* Space for content below header */
+        z-index: 99;
+    }
+
+    .header-navbar.open {
+        top: 55px;
+        /* Align with header bottom */
+    }
+
+    .header-navbar ul {
+        flex-direction: column;
+        gap: 1.8rem;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .header-navbar li {
+        font-size: 1.1rem;
+        width: 100%;
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    .book-btn {
+        margin-top: 1.5rem;
+        width: 100%;
+    }
+
+    .book-btn button {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .hamburger-icon {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-component {
+        padding: 0 1rem;
+    }
+
+    .header-logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .header-navbar {
+        height: 60vh;
+    }
+
+    .header-navbar ul {
+        gap: 1rem;
+    }
+}

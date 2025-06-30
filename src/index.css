@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Gilda+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  background-color: #1a1a1a !important;
+}
+
+/* Services.css */
+:root {
+  --primary-color: #1a1a1a;
+  --secondary-color: #55605c;
+  --accent-color: #005d7d;
+  --light-bg: #f8f8f8;
+  --white: #ffffff;
+  --primary-dark: #ffffff;
+  --secondary-dark: #55605c;
+  --gold-primary: #f6c90e;
+  --gold-secondary: #f6c90e;
+  --gold-light: #f6c90e;
+  --light-text: #838887;
+  --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}

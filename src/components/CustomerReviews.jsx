@@ -8,52 +8,48 @@ import {
     MDBRow,
 } from "mdb-react-ui-kit";
 import "./CustomerReviews.css";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight, FaStar } from "react-icons/fa";
 
 const reviews = [
     {
-        name: "Alen Alex",
-        location: "Kakkanad, Kerala",
-        content:
-            "Arackamannil Printers handled our business brochure printing, and the quality was top-notch. The colors were vibrant, and the finish was exactly what we envisioned. Highly recommended for professional print needs!",
-        avatar: "https://res.cloudinary.com/dpo91btlc/image/upload/v1748751402/3d-rendering-luxury-modern-living-room-with-fabric-sofa_uglzwv.jpg"
+        name: "Vyshu The Vaishnav",
+        content: "The one an only printing centre which prints there own logo and company name bigger than the design of custom . Then we ask they say this is the way we print",
+        avatar: "https://res.cloudinary.com/dpo91btlc/image/upload/v1752413465/user_i2grkc.png",
+        rating: 5
     },
     {
-        name: "Nivin Paul",
-        location: "Ernakulam, Kerala",
-        content:
-            "I approached Arackamannil Printers for wedding invitation cards, and they exceeded expectations. The design, texture, and timely delivery were all perfect. Great attention to detail!",
-        avatar: "https://res.cloudinary.com/dpo91btlc/image/upload/v1748700336/2_xyjpcn.png"
+        name: "Dijo Jose",
+        content: "This shop is ideal for all your printing needs preferably bigprinting works. And I felt theirrates to be really affordable. The quality is really awesome.The staff is really systematic and professional in their approach.",
+        avatar: "https://res.cloudinary.com/dpo91btlc/image/upload/v1752413465/user_i2grkc.png",
+        rating: 5
     },
     {
-        name: "Sambath",
-        location: "Vyttila, Kerala",
-        content:
-            "We printed promotional flex boards and visiting cards through Arackamannil Printers. The service was fast, the quality unmatched, and they were very responsive throughout the process.",
-        avatar: "https://res.cloudinary.com/dpo91btlc/image/upload/v1748697879/IMG_2185_i2bhiw.jpg"
+        name: "Midhun Babu",
+        content: "I got surprised by the energy of the shop owner. He deserve more as he is perfect in his profession. He cares everyone inside the shop including his staff. Printing quality is not that good even though the owner was awesome",
+        avatar: "https://res.cloudinary.com/dpo91btlc/image/upload/v1752413465/user_i2grkc.png",
+        rating: 4
     },
     {
-        name: "Akash",
-        location: "Thrissur, Kerala",
-        content:
-            "Their team helped us with complete branding material for our new store — from logo design to banners and packaging labels. Everything looked sharp and professional. Would definitely return!",
-        avatar: "https://res.cloudinary.com/dpo91btlc/image/upload/v1748751683/modern-minimalist-office_2_xxopco.jpg"
+        name: "Bibin K S",
+        content: "Good place for printing...Flex printing, Colour laser printing, and offset printing...Nice behaviour and fast service",
+        avatar: "https://res.cloudinary.com/dpo91btlc/image/upload/v1752413465/user_i2grkc.png",
+        rating: 4
     },
     {
-        name: "Anu",
-        location: "Calicut, Kerala",
-        content:
-            "I needed a custom diary and calendar printing for our company. Arackamannil Printers delivered premium quality prints at a great price. Their service is reliable and efficient.",
-        avatar: "https://res.cloudinary.com/dpo91btlc/image/upload/v1748697879/IMG_2204_xm1wvh.jpg"
+        name: "Anu Koshi Talks",
+        content: "Good place for printing...Flex printing, Colour laser printing, and offset printing...Nice behaviour and fast service",
+        avatar: "https://res.cloudinary.com/dpo91btlc/image/upload/v1752413465/user_i2grkc.png",
+        rating: 5
     },
     {
-        name: "Sreedevi",
+        name: "Mathew Thomas 70303",
         location: "Alappuzha, Kerala",
-        content:
-            "From digital prints to large-scale flex printing, Arackamannil Printers has been our go-to partner. Their consistency in quality and customer support makes them stand out.",
-        avatar: "https://res.cloudinary.com/dpo91btlc/image/upload/v1748697879/IMG_2195_x9p40b.jpg"
+        content: "All sorts of Flex Printing and Posters are available all time prior to your request.",
+        avatar: "https://res.cloudinary.com/dpo91btlc/image/upload/v1752413465/user_i2grkc.png",
+        rating: 4
     }
 ];
+
 
 
 
@@ -156,6 +152,14 @@ const ReviewCard = ({ review }) => {
                 <div className="review-titles">
                     <h5 className="review-name">{review.name}</h5>
                     <h6 className="review-role">{review.location}</h6>
+                    <div className="review-rating">
+                        {[...Array(5)].map((_, i) => (
+                            <FaStar
+                                key={i}
+                                className={`star-icon ${i < review.rating ? 'filled' : 'empty'}`}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
 
@@ -167,11 +171,8 @@ const ReviewCard = ({ review }) => {
                 </div>
             </div>
 
-            <div className="review-rating">
-                {[...Array(5)].map((_, i) => (
-                    <MDBIcon key={i} fas icon="star" className="star-icon" />
-                ))}
-            </div>
+
+
         </div>
     );
 };

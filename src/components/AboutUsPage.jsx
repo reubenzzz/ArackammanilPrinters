@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './AboutUsPage.css';
-import founder from '../assets/Page 2-18.jpg'
+import founder from '../assets/Page 2-25.jpg';
 import Header from './Header';
 import Footer from './Footer';
 import { useNavigate } from 'react-router-dom';

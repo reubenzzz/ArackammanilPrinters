@@ -13,7 +13,7 @@ import ProjectSection from './ProjectSection';
 import OurWorkFlow from './OurServices';
 import CustomerReviews from './CustomerReviews';
 import Footer from './Footer';
-import { FaInstagram, FaWhatsapp, FaFacebookF } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp, FaFacebookF, FaEnvelope } from "react-icons/fa";
 import ContactLandingSection from './ContactLanding';
 import logo from '../assets/logo.png'
 import { useNavigate } from 'react-router-dom';
@@ -23,7 +23,7 @@ const SplashScreen = ({ onComplete }) => {
     const [step, setStep] = useState(0);
 
     const companyName = "Arackamannil Printers";
-    const tagline = "We do printing as a service";
+    const tagline = "We print what you think ";
     const nameLetters = companyName.split('');
     const taglineLetters = tagline.split('');
 
@@ -138,31 +138,24 @@ const ContactPopup = ({ onClose }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setIsSubmitting(true);
 
-        emailjs.send(
-            'service_6c6do5l',
-            'template_4t6imcx',
-            {
-                name: formData.name,
-                email: formData.email,
-                phone: formData.phone,
-                title: formData.subject,
-                message: formData.message,
-                to_email: 'anulisbaraj@gmail.com'
-            },
-            'zQ4O3aRATuQjHFFMg'
-        ).then(() => {
-            setIsSubmitted(true);
-            setIsSubmitting(false);
-            setTimeout(() => {
-                onClose();
-            }, 3000);
-        }).catch((error) => {
-            console.error('Failed to send message:', error);
-            setIsSubmitting(false);
-            alert('Failed to send message. Please try again later.');
-        });
+        const { name, email, phone, subject, message } = formData;
+
+        const whatsappMessage = `Hello, I'm interested in your printing services. Here are my details:
+
+   Name: ${name}
+   Email: ${email}
+   Phone: ${phone}
+   Subject: ${subject}
+   Message: ${message}`;
+
+        const whatsappURL = `https://wa.me/919349489349?text=${encodeURIComponent(whatsappMessage)}`;
+        window.open(whatsappURL, '_blank');
+
+        setIsSubmitted(true);
+        setTimeout(() => {
+            onClose();
+        }, 3000);
     };
 
     return (
@@ -300,8 +293,10 @@ const LandingPage = () => {
     const navigate = useNavigate();
 
     const contactus = () => {
-        // navigate('/contact-us')
-    }
+        const message = "Hello, I am interested in your printing services.";
+        const whatsappURL = `https://wa.me/919349489349?text=${encodeURIComponent(message)}`;
+        window.open(whatsappURL, '_blank');
+    };
 
     useEffect(() => {
         const hasSeenSplash = localStorage.getItem('hasSeenSplash');
@@ -416,11 +411,11 @@ const LandingPage = () => {
                                             className="landing-social"
                                         >
                                             <div className="landing-social-icons">
-                                                <a href="https://www.instagram.com/abhisplanet/?igsh=MzR0b3dsdzBtbnp6&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                                                <a href="https://www.instagram.com/arackamannil_printers?igsh=aG51OW82YmU2MG50" target="_blank" rel="noopener noreferrer">
                                                     <FaInstagram className="landing-icon" />
                                                 </a>
-                                                <a href="https://wa.me/9747515517" target="_blank" rel="noopener noreferrer">
-                                                    <FaWhatsapp className="landing-icon" />
+                                                <a href="mailto:arackamannilranny@gmail.com">
+                                                    <FaEnvelope className="landing-icon" />
                                                 </a>
                                                 <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer">
                                                     <FaFacebookF className="landing-icon" />

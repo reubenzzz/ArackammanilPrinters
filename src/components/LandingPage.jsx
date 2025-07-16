@@ -15,14 +15,14 @@ import CustomerReviews from './CustomerReviews';
 import Footer from './Footer';
 import { FaInstagram, FaWhatsapp, FaFacebookF, FaEnvelope } from "react-icons/fa";
 import ContactLandingSection from './ContactLanding';
-import logo from '../assets/logo.png'
+import logo from '../assets/logoar.png';
 import { useNavigate } from 'react-router-dom';
 import { FaPaperPlane } from 'react-icons/fa';
 import emailjs from 'emailjs-com';
 const SplashScreen = ({ onComplete }) => {
     const [step, setStep] = useState(0);
 
-    const companyName = "Arackamannil Printers";
+    const companyName = "Arackamannil  Printers";
     const tagline = "We print what you think ";
     const nameLetters = companyName.split('');
     const taglineLetters = tagline.split('');
@@ -391,10 +391,10 @@ const LandingPage = () => {
                                             className="landing-hero"
                                         >
                                             <div className="landing-hero-content">
-                                                <h1>Arackamannil Printers</h1>
+                                                <h1 className='landing-hero-content-h1'>Arackamannil Printers</h1>
                                                 <p>
                                                     Printing is not just what we do — it's how we bring your ideas to life.<br />
-                                                    With decades of expertise and cutting-edge technology, we deliver more than ink on paper — we deliver trust, quality, and creativity with every print.
+                                                    With decades of expertise and cutting-edge technology, we deliver more than ink on paper we deliver trust, quality, and creativity with every print.
                                                 </p>
                                                 <button className="landing-contact-btn" onClick={contactus}>
                                                     Contact Us
@@ -417,7 +417,7 @@ const LandingPage = () => {
                                                 <a href="mailto:arackamannilranny@gmail.com">
                                                     <FaEnvelope className="landing-icon" />
                                                 </a>
-                                                <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer">
+                                                <a href="https://www.facebook.com/ArackamannilPrinters?sfnsn=wa" target="_blank" rel="noopener noreferrer">
                                                     <FaFacebookF className="landing-icon" />
                                                 </a>
 

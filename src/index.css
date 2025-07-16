@@ -2,6 +2,7 @@
 
 body {
   background-color: #1a1a1a !important;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Services.css */
@@ -19,4 +20,11 @@ body {
   --light-text: #838887;
   --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('./assets/fonts/HarabaraMaisDemo.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }

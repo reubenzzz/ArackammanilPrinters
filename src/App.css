@@ -3,3 +3,11 @@
 body {
   font-family: 'Montserrat', sans-serif;
 }
+
+/* src/assets/fonts/fonts.css */
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('./assets/fonts/Harabara\ Mais\ Demo.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -24,7 +24,7 @@
     display: flex;
     font-size: 3rem;
     font-weight: 300;
-    font-family: 'Gilda Display', sans-serif;
+    font-family: 'MyCustomFont';
     letter-spacing: 1px;
     margin-top: 3rem;
     overflow: hidden;
@@ -70,7 +70,7 @@
     flex-wrap: wrap;
     font-size: 1.2rem;
     font-weight: 300;
-    font-family: 'Gilda Display', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #cccccc;
     margin-top: 1rem;
     letter-spacing: 0.5px;
@@ -412,20 +412,20 @@ section#home {
     max-width: 700px;
 }
 
-.landing-hero-content h1 {
+.landing-hero-content-h1 {
     font-size: 48px;
     font-weight: 100;
     line-height: 4rem;
     margin-bottom: 1rem;
-    font-family: 'Gilda Display', serif;
+    font-family: 'MyCustomFont';
 }
 
 .landing-hero-content p {
     font-size: 18px;
     margin-bottom: 1.5rem;
     color: #ddd;
-    font-weight: 100;
-    font-family: 'Gilda Display', serif;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .landing-contact-btn {

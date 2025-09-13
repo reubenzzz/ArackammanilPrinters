@@ -7,6 +7,7 @@ import ProjectDetailPage from './components/ProjectDetail';
 import ScrollToTop from './components/ScrollToTop';
 import ContactSection from './components/ContactUs';
 import AboutPage from './components/AboutUsPage';
+import CategoriesSection from '@/components/CategoriesSection';
 const App = () => {
   return (
     <Router>

@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import CategoryCard from './CategoryCard';
 
 // Import category images
-import idCardsImg from '@/assets/id-cards.jpg';
+import idCardsImg from '@/assets/id_card_ubtaeo.png';
 import balloonPrintingImg from '@/assets/balloon-printing.jpg';
 import signBoardsImg from '@/assets/sign-boards.jpg';
 import bannersImg from '@/assets/banners.jpg';

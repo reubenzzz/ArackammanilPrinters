@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "vercel-build": "npm install --legacy-peer-deps && vite build"
+
   },
   "dependencies": {
     "emailjs-com": "^3.2.0",

@@ -9,7 +9,6 @@ import bg3 from '../assets/bg2.jpg'
 import AboutUs from './AboutUs';
 import OurServices from './Services';
 import ReportCounter from './ReportCounter';
-import ProjectSection from './ProjectSection';
 import OurWorkFlow from './OurServices';
 import CustomerReviews from './CustomerReviews';
 import Footer from './Footer';
@@ -22,7 +21,7 @@ import emailjs from 'emailjs-com';
 const SplashScreen = ({ onComplete }) => {
     const [step, setStep] = useState(0);
 
-    const companyName = "Arackamannil  Printers";
+    const companyName = "Arackamannil   Printers";
     const tagline = "We print what you think ";
     const nameLetters = companyName.split('');
     const taglineLetters = tagline.split('');
